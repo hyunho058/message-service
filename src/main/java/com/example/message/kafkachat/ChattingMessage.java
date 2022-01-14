@@ -21,7 +21,6 @@ public class ChattingMessage implements Serializable {
 
     @Builder
     public ChattingMessage(String fileName, String rawData, String user) {
-
         this.fileName = fileName;
         this.rawData = rawData;
         this.user = user;

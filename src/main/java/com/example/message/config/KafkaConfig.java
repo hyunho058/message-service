@@ -1,8 +1,7 @@
 package com.example.message.config;
 
-//import com.dydtjr1128.chatting.model.ChattingMessage;
 import com.example.message.kafkachat.ChattingMessage;
-//import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableMap;
 import org.apache.kafka.common.serialization.IntegerDeserializer;
 import org.apache.kafka.common.serialization.IntegerSerializer;
 import org.springframework.context.annotation.Bean;
@@ -36,13 +35,12 @@ public class KafkaConfig {
     @Bean
     public Map<String, Object> producerConfigs() {
 
-//        return ImmutableMap.<String, Object>builder()
-//                .put("bootstrap.servers", "localhost:9092")//kafka server ip & port
-//                .put("key.serializer", IntegerSerializer.class)
-//                .put("value.serializer", JsonSerializer.class)//Object json parser
-//                .put("group.id", "spring-boot-test") // chatting  group id
-//                .build();
-        return null;
+        return ImmutableMap.<String, Object>builder()
+                .put("bootstrap.servers", "localhost:9092")//kafka server ip & port
+                .put("key.serializer", IntegerSerializer.class)
+                .put("value.serializer", JsonSerializer.class)//Object json parser
+                .put("group.id", "spring-boot-test") // chatting  group id
+                .build();
     }
     //Receiver config
     @Bean
@@ -59,12 +57,11 @@ public class KafkaConfig {
 
     @Bean
     public Map<String, Object> consumerConfigs() {
-//        return ImmutableMap.<String, Object>builder()
-//                .put("bootstrap.servers", "localhost:9092")
-//                .put("key.deserializer", IntegerDeserializer.class)
-//                .put("value.deserializer", JsonDeserializer.class)
-//                .put("group.id", "spring-boot-test")
-//                .build();
-        return null;
+        return ImmutableMap.<String, Object>builder()
+                .put("bootstrap.servers", "localhost:9092")
+                .put("key.deserializer", IntegerDeserializer.class)
+                .put("value.deserializer", JsonDeserializer.class)
+                .put("group.id", "spring-boot-test")
+                .build();
     }
 }

@@ -16,7 +16,7 @@ public class ChattingController {
     private final Sender sender;
     private final Receiver receiver;
     private final ChattingHistoryDAO chattingHistoryDAO;
-    private static String BOOT_TOPIC = "kafka-chatting";
+    private static String BOOT_TOPIC = "kafka_chatting";
 
     //// "url/app/message"로 들어오는 메시지를 "/topic/public"을 구독하고있는 사람들에게 송신
     @MessageMapping("/message")//@MessageMapping works for WebSocket protocol communication. This defines the URL mapping.

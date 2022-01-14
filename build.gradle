@@ -29,12 +29,13 @@ dependencies {
 
 	//kafkachat
 	implementation 'org.springframework.boot:spring-boot-starter-websocket'
-	implementation 'org.springframework.kafkachat:spring-kafkachat'
+//	implementation 'org.springframework.kafkachat:spring-kafkachat'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework.kafkachat:spring-kafkachat-test'
+//	testImplementation 'org.springframework.kafkachat:spring-kafkachat-test'
 	implementation 'org.springframework.kafka:spring-kafka'
+	implementation group: 'com.google.guava', name: 'guava', version: '30.0-jre'
 }
 
 test {
