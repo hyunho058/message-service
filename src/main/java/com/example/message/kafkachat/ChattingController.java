@@ -6,7 +6,6 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.sound.midi.Receiver;
 import java.util.List;
 
 @RestController
